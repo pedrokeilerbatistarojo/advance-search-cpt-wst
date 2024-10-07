@@ -26,6 +26,7 @@ function plugin_enqueue_styles(): void
         wp_enqueue_style('my-styles', plugins_url('assets/css/style.css', __FILE__));
     }
 }
+
 add_action('wp_enqueue_scripts', 'plugin_enqueue_styles');
 
 
