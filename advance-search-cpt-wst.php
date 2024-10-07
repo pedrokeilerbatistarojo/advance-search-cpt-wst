@@ -20,6 +20,14 @@ require_once ADVANCED_SEARCH_PLUGIN_PATH . 'includes/AdvancedSearchService.php';
 
 $service = new AdvancedSearchService();
 
+function plugin_enqueue_styles(): void
+{
+    if (is_singular() && has_shortcode(get_post()->post_content, 'search')) {
+        wp_enqueue_style('my-styles', plugins_url('assets/css/style.css', __FILE__));
+    }
+}
+add_action('wp_enqueue_scripts', 'plugin_enqueue_styles');
+
 
 
 
