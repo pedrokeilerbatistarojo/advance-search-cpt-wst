@@ -46,9 +46,10 @@ class AdvancedSearchService
             while ($posts_query->have_posts()) {
                 $posts_query->the_post();
                 $output .= '<div class="column">';
-                $output .= '<a href="' . get_permalink() . '">';
-                $output .= '<img src="'. get_the_post_thumbnail_url() .'" style="max-width: 100%;height: auto" alt="Responsive image"></a>';
-                $output .= '<h3 style="padding: 10px"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
+                $output .=      '<a href="' . get_permalink() . '">';
+                $output .=          '<i class="fa fa-graduation-cap" aria-hidden="true"></i>';
+                $output .=      '</a>';
+                $output .=  '<h3 style="padding: 10px"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
                 $output .= '</div>';
             }
         } else {
