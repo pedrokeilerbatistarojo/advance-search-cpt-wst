@@ -1,7 +1,6 @@
 .list-filtered-posts {
     padding: 10px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -11,16 +10,11 @@
 }
 
 .column {
-    margin: 10px;
     padding: 10px;
     box-shadow: 0 1px 30px rgba(12, 20, 15, 0.1);
     border-radius: 5px;
     background-color: #fff;
     flex: 0 1 calc(50% - 20px);
-}
-
-.column h3{
-    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -42,4 +36,12 @@
     border-radius: 100%;
     color: #fff;
     background-color: var(--e-global-color-primary);
+}
+
+.column h3{
+    margin: 0;
+    font-size: 18px!important;
+    font-weight: 600!important;
+    color: var(--tp-common-black);
+    border: 0;
 }
