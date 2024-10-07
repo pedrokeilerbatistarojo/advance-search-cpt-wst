@@ -9,3 +9,14 @@ Author: Pedro Keiler Batista Rojo <pedrokeilerbatistarojo>
 Author URI: https://github.com/pedrokeilerbatistarojo
 */
 
+if (!defined('ABSPATH')) exit;
+
+define('ADVANCED_SEARCH_PLUGIN_PATH', plugin_dir_path(__FILE__));
+define('ADVANCED_SEARCH_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+require_once ADVANCED_SEARCH_PLUGIN_PATH . 'includes/AdvancedSearchService.php';
+
+add_action('plugins_loaded', array('AdvancedSearchService', 'init'));
+
+
+
